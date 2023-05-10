@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { parse, v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import styles from "./Project.module.css";
 import { useParams } from "react-router-dom";
 import Loading from "../layout/Loading";
@@ -21,7 +21,7 @@ const Project = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/projects/${id}`, {
+      fetch(`https://my-json-server.typicode.com/EmersonAraujonb/fake_api_records/projects/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Project = () => {
       return false;
     }
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
+    fetch(`https://my-json-server.typicode.com/EmersonAraujonb/fake_api_records/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -103,7 +103,7 @@ const Project = () => {
     project.cost = newCost;
 
     // update project
-    fetch(`http://localhost:5000/projects/${project.id}`, {
+    fetch(`https://my-json-server.typicode.com/EmersonAraujonb/fake_api_records/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -128,7 +128,7 @@ const Project = () => {
     projectUpdated.services = serviceUpdated;
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
-    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+    fetch(`https://my-json-server.typicode.com/EmersonAraujonb/fake_api_records/projects/${projectUpdated.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

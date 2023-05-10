@@ -12,7 +12,7 @@ const NewProject = () => {
     project.cost = 0;
     project.services = [];
 
-    fetch("http://localhost:5000/projects", {
+    fetch("https://my-json-server.typicode.com/EmersonAraujonb/fake_api_records/projects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

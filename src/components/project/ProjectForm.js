@@ -8,7 +8,7 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
   const [categories, setCategories] = React.useState([]);
   const [project, setProject] = React.useState(projectData || {});
   useEffect(() => {
-    fetch("http://localhost:5000/categories", {
+    fetch("https://my-json-server.typicode.com/EmersonAraujonb/fake_api_records/categories", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
