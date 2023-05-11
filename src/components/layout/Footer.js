@@ -10,7 +10,7 @@ const Footer = () => {
             <li><FaInstagram/></li>
             <li><FaLinkedin/></li>
         </ul>
-        <p className={styles.copy_right}><span>Costs</span> &copy; {new Date().getFullYear()}</p>
+        <p className={styles.copy_right}><span>Costs</span> &copy; 2023</p>
     </footer>
   )
 }

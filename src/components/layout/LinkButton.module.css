@@ -8,3 +8,9 @@
 .btn:hover {
     color: #FFBB33;
 }
+@media (max-width: 425px) {
+    .btn {
+        font-size: 12px;
+        margin-right: 30px;
+    }
+}
